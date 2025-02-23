@@ -11,92 +11,136 @@
 /* animation */
 
 @keyframes b {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  50% {
+    transform: rotate(-25deg);
+  }
+  100% {
     transform: rotate(-20deg);
   }
 }
 
 @keyframes l {
-  from {
+  0% {
     transform: rotate(0deg) translateY(0px);
   }
-  to {
+  50% {
+    transform: rotate(12deg) translateY(14px);
+  }
+  100% {
     transform: rotate(10deg) translateY(10px);
   }
 }
 
 @keyframes o {
-  from {
+  0% {
     transform: translateY(0px);
   }
-  to {
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes theLine {
-  from {
-    opacity: 0%;
+  0% {
+    opacity: 0% ;
+    transform: translate(-5px);
   }
-  to {
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
     opacity: 100%;
+    transform: translate(0px);
   }
 }
 
 @keyframes k {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  50% {
+    transform: rotate(16deg);
+  }
+  100% {
     transform: rotate(12deg);
   }
 }
 
 @keyframes a {
-  from {
+  0% {
     transform: rotate(0deg) translateY(0px);
   }
-  to {
+  50% {
+    transform: rotate(-15deg) translateY(-14px);
+  }
+  100% {
     transform: rotate(-10deg) translateY(-10px);
   }
 }
 
 @keyframes d {
-  from {
+  0% {
     transform: rotate(0deg) translateY(0px);
   }
-  to {
+  50% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+  100% {
     transform: rotate(-15deg) translateY(0px);
   }
 }
 
 @keyframes u {
-  from {
+  0% {
     transform: rotate(0deg) translateX(0px);
   }
-  to {
+  50% {
+    transform: rotate(10deg) translateX(-15px);
+  }
+  100% {
     transform: rotate(5deg) translateX(-10px);
   }
 }
 
 @keyframes opacity-text {
-  from {
+  0% {
     opacity: 0%;
   }
-  to {
+  100% {
     opacity: var(--opacity-text-1);
   }
 }
 
-@keyframes balok {
+@keyframes balok1 {
   0% {
-    transform: translateX(-900px) rotate(0deg) translateY(200px);
+    transform: translate(900px, 200px) rotate(0deg);
   }
   100% {
-    transform: translateX(-400px) rotate(20deg) translateY(100px);
+    transform: translate(500px, 300px) rotate(50deg);
+  }
+}
+
+@keyframes balok2 {
+  0% {
+    transform: translate(-900px, 200px) rotate(10deg);
+  }
+  100% {
+    transform: translate(-400px, 100px) rotate(-20deg);
+  }
+}
+
+@keyframes balok3 {
+  0% {
+    transform: translate(900px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-200px, -200px) rotate(30deg);
   }
 }
 
@@ -111,8 +155,21 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Warna track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blokadu-red); /* Warna thumb scrollbar */
+  border-radius: 0px; /* Radius sudut thumb */
+}
 /* header */
 
 header {
@@ -157,12 +214,12 @@ nav a:hover {
 /* main */
 main {
   background-color: bisque;
-  min-width: 1240px;
   width: 100%;
 }
 
 main #content {
   width: 100%;
+  min-width: 700px;
   height: auto;
   background-color: #ff4e8e;
   margin: auto;
@@ -178,7 +235,6 @@ main #content {
 
 #home {
   background-color: var(--blokadu-red);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +249,7 @@ main #content {
   opacity: 0%;
   width: 500px;
   text-align: center;
-  animation: opacity-text 500ms 1300ms ease-in-out forwards;
+  animation: opacity-text 800ms 1800ms ease-in-out forwards;
   user-select: none;
 }
 
@@ -225,7 +281,7 @@ main #content {
 }
 
 .blokadu .o {
-  animation: o 200ms ease-in-out 1000ms forwards;
+  animation: o 200ms ease-in-out 1200ms forwards;
 }
 
 .blokadu .line {
@@ -235,12 +291,12 @@ main #content {
   position: absolute;
   bottom: 8px;
   left: 12px;
-  animation: theLine 200ms ease-in-out 1000ms forwards;
+  animation: theLine 200ms ease-in-out 1150ms forwards;
   opacity: 0%;
 }
 
 .blokadu .k {
-  animation: k 200ms ease-in-out 1000ms forwards;
+  animation: k 200ms ease-in-out 1100ms forwards;
 }
 
 .blokadu .a {
@@ -248,11 +304,11 @@ main #content {
 }
 
 .blokadu .d {
-  animation: d 200ms ease-in-out 1000ms forwards;
+  animation: d 200ms ease-in-out 1150ms forwards;
 }
 
 .blokadu .u {
-  animation: u 200ms ease-in-out 1000ms forwards;
+  animation: u 200ms ease-in-out 1200ms forwards;
 }
 /* block */
 
@@ -262,7 +318,7 @@ main #content {
   height: 50px;
   background-color: var(--blokadu-blue);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.274);
-  animation: balok 400ms 1200ms ease-in-out forwards;
+  transform: translateX(200vh) rotate(0deg) translateY(100px);
   user-select: none;
 }
 
@@ -271,15 +327,28 @@ main #content {
 }
 
 .block1 {
-  background-color: lightblue;
-  transform: translateX(200vh) rotate(0deg) translateY(100px);
+  background-color: #2370cb;
+  animation: balok1 700ms 1500ms ease-in-out forwards;
 }
 .block2 {
-  background-color: lightcoral;
-  transform: translateX(200vh) rotate(0deg) translateY(100px);
+  background-color: #f8d000;
+  animation: balok2 700ms 1400ms ease-in-out forwards;
 }
 .block3 {
-  background-color: lightgreen;
-  transform: translateX(200vh) rotate(0deg) translateY(100px);
+  background-color: #cb2345;
+  animation: balok3 700ms 1400ms ease-in-out forwards;
 }
+
 /* Perkenalin section */
+#perkenalin{
+  background-color: white;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+#perkenalin .primary-text{
+  font-size: var(--text-size-blokadu);
+  color: var(--blokadu-red);
+  margin-top: 80px;
+}
