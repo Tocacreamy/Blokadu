@@ -4,12 +4,21 @@
   --blokadu-red: #ff4e8e;
   --blokadu-blue: #2370cb;
   --text-size-blokadu: 100px;
-  --text-size-secopndary-prime:80px;
+  --text-size-secopndary-prime:50px;
   --opacity-text-1: 40%;
   --opacity-text-prime: 100%;
 }
 
 /* animation */
+
+@keyframes blokadu{
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
 
 @keyframes b {
   0% {
@@ -114,7 +123,7 @@
     opacity: 0%;
   }
   100% {
-    opacity: var(--opacity-text-1);
+    opacity: 60%;
   }
 }
 
@@ -122,14 +131,20 @@
   0% {
     transform: translate(900px, 200px) rotate(0deg);
   }
+  75% {
+    transform: translate(500px, 200px) rotate(50deg);
+  }
   100% {
-    transform: translate(500px, 300px) rotate(50deg);
+    transform: translate(500px, 200px) rotate(50deg);
   }
 }
 
 @keyframes balok2 {
   0% {
     transform: translate(-900px, 200px) rotate(10deg);
+  }
+  75% {
+    transform: translate(-400px, 100px) rotate(-22deg);
   }
   100% {
     transform: translate(-400px, 100px) rotate(-20deg);
@@ -139,6 +154,9 @@
 @keyframes balok3 {
   0% {
     transform: translate(900px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-200px, -200px) rotate(33deg);
   }
   100% {
     transform: translate(-200px, -200px) rotate(30deg);
@@ -230,6 +248,11 @@ main #content {
   height: 100vh;
   margin: 0px 0px;
   background-color: aliceblue;
+  padding: 50px;
+}
+
+#home{
+  padding: 0;
 }
 
 /* Aside */
@@ -238,7 +261,6 @@ main #content {
   width: 150px;
   height: 100vh;
   position: fixed;
-  background-color: green transparent;
   z-index: 100;
   top: 0;
   right: 0;
@@ -268,11 +290,11 @@ main #content {
 .sidebar-menu {
   width: 100px;
   height: 60vh;
-  background-color: aliceblue;
+  background-color: white;
   margin:0px 10px;
   border-radius: 20px;
   transition: all 300ms ;
-  transform: translate(14vh,0vh);
+  transform: translate(20vh,0vh);
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.274);
 }
 
@@ -304,6 +326,8 @@ main #content {
   display: flex;
   gap: 10px;
   user-select: none;
+  opacity: 0%;
+  animation: blokadu 500ms 200ms forwards;
 }
 
 .blokadu h1 {
@@ -453,5 +477,17 @@ figure figcaption{
   font-weight: 600;
 }
 
+/* Cara main section */
+#cara_main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 
+}
 
+.image-cara_main{
+  width: 1000px;
+  height: auto;
+  margin-top: 50px;
+}
