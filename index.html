@@ -19,7 +19,7 @@
         <a href="#perkenalin">Perkenalin</a>
         <a href="#product">Produk</a>
         <a href="#cara_main">Cara main</a>
-        <a href="#sosial media">Sosial media</a>
+        <a href="#price">Harga</a>
       </nav>
     </header>
     <main>
@@ -48,12 +48,16 @@
         <section id="perkenalin" class="section content-section">
           <article>
             <h1 class="primary-text">Kenalan dulu sama</h1>
-            <div>
-              <img src="image/edu.png" alt="edu" class="character-image" />
-              <img src="image/nara.png" alt="nara" class="character-image" />
+            <div class="character-container">
+              <div class="character-card">
+                <h1 id="edu" class="character-name">Edu</h1>
+                <img src="image/edu.png" alt="edu" class="character-image" />
+              </div>
+              <div class="character-card">
+                <h1 id="nara" class="character-name">Nara</h1>
+                <img src="image/nara.png" alt="nara" class="character-image" />
+              </div>
             </div>
-            <h1 id="edu">Edu</h1>
-            <h1 id="nara">Nara</h1>
           </article>
         </section>
         <section id="product" class="section content-section">
@@ -78,16 +82,44 @@
                   <figcaption>Buku Panduan</figcaption>
                 </figure>
               </div>
-              
             </div>
           </article>
         </section>
         <section id="cara_main" class="section">
           <h1 class="primary-text">Cara main</h1>
-          <img src="image/cara_main.png" alt="cara_main" class="image-cara_main">
+          <img
+            src="image/cara_main.png"
+            alt="cara_main"
+            class="image-cara_main"
+          />
         </section>
-        <section id="sosial media" class="section">
-          <h1>Sosial media</h1>
+        <section id="price" class="section">
+          <div class="product-image">
+            <img src="./image/product_photo.png" alt="" />
+          </div>
+          <div class="pricelist">
+            <div class="rupiah">
+              <h3>Rp.</h3>
+              <h1>199.500</h1>
+            </div>
+            <div class="marketplace">
+              <h1>Beli sekarang di</h1>
+              <div class="link">
+                <a
+                  href="https://shopee.co.id/Mainan-stacko-edukasi-anak-susun-tower-balok-permainan-keseimbangan-family-fun-game-block-set-i.262097682.22145525161?sp_atk=261e27cb-d5d8-4d3a-8955-e6ac653d0d54&xptdk=261e27cb-d5d8-4d3a-8955-e6ac653d0d54"
+                  id="shopee"
+                  target="_blank"
+                  ><img src="./image/shopee.svg" alt="" />Shopee</a
+                >
+                <a
+                  href="https://www.tokopedia.com/sumo-baby/mainan-balok-blok-block-susun-edukasi-anak-brick-bongkar-pasang?extParam=ivf%3Dtrue%26keyword%3Dblok+permainan+edukasi+anak&src=topads"
+                  id="tokped"
+                  target="_blank"
+                  ><img src="./image/tokped.svg" alt="" />Tokopedia</a
+                >
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <aside>
@@ -97,11 +129,43 @@
             <div class="sidebar-button-part"></div>
             <div class="sidebar-button-part"></div>
           </div>
-          <div class="sidebar-menu"></div>
+          <div class="sidebar-menu">
+            <h1>TIM BLOKADU</h1>
+            <div class="team-card" id="luqman-img">
+              <div class="team-desc" id="luqman">
+                <h1>Luqman Tifa Perwira S.Psi., M.Psi., Psikolog</h1>
+                <h3>Supervisor</h3>
+              </div>
+              <img src="./image/supervisor.png" alt="" />
+            </div>
+
+            <div class="team-card" id="faiz-img">
+              <div class="team-desc" id="faiz">
+                <h1>Muhammad Nurul Faiz</h1>
+                <h3>Project Leader</h3>
+              </div>
+              <img src="./image/faiz.png" alt="" />
+            </div>
+
+            <img src="./image/dimas.png" alt="" /><img
+              src="./image/nisa.png"
+              alt=""
+            /><img src="./image/anik.png" alt="" />
+          </div>
         </article>
       </aside>
     </main>
-    <footer></footer>
+    <footer>
+      <div id="social_media">
+        <a href="https://www.instagram.com/pkmkuad_blokadu/" target="_blank"
+          ><img src="./image/instagram.svg" alt="" />Instagram</a
+        >
+        <a href="https://g.co/kgs/ioHCYmJ" target="_blank"
+          ><img src="./image/map.svg" alt="" />Daerah Istimewa Yogyakarta</a
+        >
+      </div>
+      <h3>© 2022 Blokadu. Hak Cipta Dilindungi.</h3>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -86,3 +86,24 @@ sidebar.addEventListener('click', () => {
 
 // 
 
+const luqman_img = document.querySelector('#luqman-img');
+const luqman = document.querySelector('#luqman');
+
+luqman_img.addEventListener('mouseover',() =>{
+  luqman.style.visibility = 'visible';
+})
+
+luqman_img.addEventListener('mouseout',() =>{
+  luqman.style.visibility = 'hidden';
+})
+
+const faiz_img = document.querySelector('#faiz-img');
+const faiz = document.querySelector('#faiz');
+
+faiz_img.addEventListener('mouseover',() =>{
+  faiz.style.visibility = 'visible';
+})
+
+faiz_img.addEventListener('mouseout',() =>{
+  faiz.style.visibility = 'hidden';
+})
