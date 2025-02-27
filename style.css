@@ -216,6 +216,15 @@ nav {
   justify-content: center;
   align-items: center;
   height: 60px;
+  flex-direction: column;
+}
+nav ul {
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+  width : 2 em
 }
 
 nav a {
@@ -304,29 +313,29 @@ main #content {
   gap: 5px;
 }
 
-.sidebar-menu h1{
+.sidebar-menu h1 {
   text-align: center;
   color: #ff4e8e;
   margin-bottom: 10px;
 }
 
-.sidebar-menu img{
+.sidebar-menu img {
   width: 70%;
   transition: all 200ms ease-in-out;
 }
 
-.sidebar-menu img:hover{
+.sidebar-menu img:hover {
   width: 85%;
 }
 
-.team-card{
+.team-card {
   display: flex;
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.team-desc{
+.team-desc {
   position: absolute;
   background-color: white;
   left: -25vh;
@@ -336,10 +345,10 @@ main #content {
   visibility: hidden;
 }
 
-.team-desc h1,.team-desc h3{
+.team-desc h1,
+.team-desc h3 {
   text-align: left;
 }
-
 
 /* home section */
 
@@ -496,7 +505,6 @@ main #content {
 }
 
 #nara {
-  font-size: 120px;
   color: var(--blokadu-red);
   left: 25vh;
   top: -5vh;
@@ -506,7 +514,6 @@ main #content {
 }
 
 #edu {
-  font-size: 120px;
   color: var(--blokadu-blue);
   left: 6vh;
   top: -5vh;
@@ -565,11 +572,15 @@ figure figcaption {
 
 #price {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image img {
-  width: 600px;
+  width: 80%;
+  min-width: 400px;
   height: auto;
+  max-width: 600px;
 }
 
 .pricelist {
@@ -588,7 +599,7 @@ figure figcaption {
 }
 .rupiah h1 {
   color: #cb2345;
-  font-size: 150px;
+  font-size:100px;
 }
 
 .marketplace {
@@ -642,15 +653,106 @@ footer {
   gap: 20px;
 }
 
-#social_media{
+#social_media {
   display: flex;
   gap: 20px;
 }
 
-#social_media a{
+#social_media a {
   color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+
+@media (max-width: 700px) {
+  
+  #nav-bar{
+    visibility: hidden;
+  }
+
+  .blokadu h1{
+    font-size: 55px;
+  }
+
+  .blokadu .line {
+    background-color: white;
+    width: 30px;
+    height: 7px;
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+    animation: theLine 200ms ease-in-out 1150ms forwards;
+    opacity: 0%;
+  }
+
+  main #content {
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    background-color: #ff4e8e;
+    margin: auto;
+  }
+
+
+
+
+
+  #content p{
+    font-size: 13px;
+    width: 60%;
+  }
+
+  #perkenalin{
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .character-image{
+    width: 400px;
+  }
+
+  .character-name{
+    font-size: 50px;
+  }
+
+  .character-container{
+    flex-direction: column;
+  }
+
+  .character-card{
+    width: 80px;
+    margin: 10px 0px;
+  }
+
+  #product{
+    height: auto;
+  }
+
+  .product-items{
+    flex-direction: column;
+  }
+
+  .image-cara_main{
+    width: 100%;
+  }
+
+  #cara_main{
+    height: auto;
+  }
+
+  #price{
+    flex-direction: column;
+    height: auto;
+
+  }
+  .rupiah h3{
+    font-size: 30px;
+  }
+
+  .rupiah h1{
+    font-size: 80px;
+  }
 }
